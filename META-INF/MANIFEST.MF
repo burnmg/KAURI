@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Boot-Class-Path: 
+Built-By: fracpete
+Build-Jdk: 1.6.0_25
+Premain-Class: sizeof.agent.SizeOfAgent
+Created-By: Apache Maven 3.0.4
+Can-Redefine-Classes: false
+Archiver-Version: Plexus Archiver
+
