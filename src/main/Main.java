@@ -16,10 +16,16 @@ public class Main {
 
 	public static void main(String[] args) throws IOException 
 	{
-
-		testMixedDriftBernoulliGenerator();
-		//testRelativeVolatilityDetector();
+		testMultipleDriftBernoulliDistributionGenerator();
+		testRelativeVolatilityDetector();
 		//testADWINMultipleDrift();
+	}
+	
+	public static void testMultipleDriftBernoulliDistributionGenerator()
+	{
+		MultipleDriftBernoulliDistributionGenerator mgen = new MultipleDriftBernoulliDistributionGenerator();
+		mgen.generateInput(0.5, 50, 115, 100000, false, "MultipleDriftBernoulliDistributionGeneratorRes.csv");
+		mgen.generateInput(0.5, 100, 115, 100000, true, "MultipleDriftBernoulliDistributionGeneratorRes.csv");
 	}
 	
 	public static void testBerGen() throws IOException
@@ -85,7 +91,7 @@ public class Main {
 	public static void testADWINMultipleDrift() throws IOException
 	{
 		ADWIN adwin = new ADWIN(1.0);
-		BufferedReader reader = new BufferedReader(new FileReader(new File("MixedDriftBernoulliGeneratorOutPut.csv")));
+		BufferedReader reader = new BufferedReader(new FileReader(new File("MultipleDriftBernoulliDistributionGeneratorRes.csv")));
 		
 		int count = 0;
 		int predriftpos = 0;
@@ -117,10 +123,10 @@ public class Main {
 	public static void testRelativeVolatilityDetector() throws NumberFormatException, IOException
 	{
 		ADWIN cutpointdetector = new ADWIN();
-		RelativeVolatilityDetector rvd =  new RelativeVolatilityDetector(cutpointdetector, 32, 0.15);
+		RelativeVolatilityDetector rvd =  new RelativeVolatilityDetector(cutpointdetector, 30, 0.25);
 		int count = 0;
 		
-		BufferedReader reader = new BufferedReader(new FileReader(new File("MixedDriftBernoulliGeneratorOutPut.csv")));
+		BufferedReader reader = new BufferedReader(new FileReader(new File("MultipleDriftBernoulliDistributionGeneratorRes.csv")));
 		
 		String line = "";
 		int bit = 0;
@@ -139,7 +145,7 @@ public class Main {
 			}
 			count++;
 		}
-		System.out.println("Drift Count: " + driftcount);
+		System.out.println("Volatility Drift Count: " + driftcount);
 		reader.close();
 		
 	}
