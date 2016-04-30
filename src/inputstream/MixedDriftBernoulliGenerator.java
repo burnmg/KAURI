@@ -5,9 +5,9 @@ import java.io.FileWriter;
 import java.util.Random;
 
 public class MixedDriftBernoulliGenerator {
-	public void generateInput(double startingMean, int numDrifts, int randomSeed, String fileDir) {
+	public void generateInput(double startingMean, int numDrifts, int randomSeed, String fileDir, int length) {
 		try {
-			BufferedWriter bWriter = new BufferedWriter(new FileWriter(fileDir));
+			BufferedWriter bWriter = new BufferedWriter(new FileWriter(fileDir, true));
 
 			double sign = Math.random() > 0.5 ? 1.0 : -1.0;
 			double currentMean = startingMean;
@@ -15,7 +15,7 @@ public class MixedDriftBernoulliGenerator {
 			for (int i = 0; i < numDrifts; i++) {
 
 				int timeFrame = (int) (Math.random() * 1000) + 1;
-				timeFrame = 1000;
+				timeFrame = length;
 				double magnitude = Math.random();
 				magnitude = 0.6;
 				boolean boundTest = false;
@@ -40,11 +40,12 @@ public class MixedDriftBernoulliGenerator {
 						break;
 					}
 				}
-				double temp = (double) timeFrame / 1000;
+				// double temp = (double) timeFrame / 1000;
 				// System.out.println(i + "," + currentMean + "," +
 				// sign*magnitude + "," + timeFrame);
 				// System.out.println(temp);
 				// System.out.println(sign * magnitude / temp);
+				
 				System.out.println(magnitude + " " + currentMean + " " + timeFrame);
 				currentMean = generateSingleDrift(bWriter, currentMean, sign * (magnitude / (double) timeFrame),
 						timeFrame, randomSeed);
@@ -74,7 +75,7 @@ public class MixedDriftBernoulliGenerator {
 				driftMean[0] += (slope + (10 * slope * rand)); // Gaussian
 																// Perturbation
 				// driftMean[0] += slope;
-				System.out.println(driftMean[0]);
+				// System.out.println(driftMean[0]);
 
 				gen.setMeans(driftMean);
 				bWriter.write(gen.getNextTransaction() + "\n");

@@ -18,7 +18,8 @@ public class Main {
 	{
 
 		testMixedDriftBernoulliGenerator();
-		testRelativeVolatilityDetector();
+		//testRelativeVolatilityDetector();
+		//testADWINMultipleDrift();
 	}
 	
 	public static void testBerGen() throws IOException
@@ -77,7 +78,8 @@ public class Main {
 	public static void testMixedDriftBernoulliGenerator()
 	{
 		MixedDriftBernoulliGenerator megen = new MixedDriftBernoulliGenerator();
-		megen.generateInput(0.1, 10, 1221, "MixedDriftBernoulliGeneratorOutPut.csv");
+		megen.generateInput(0.6, 10, 23, "MixedDriftBernoulliGeneratorOutPut.csv", 10000000);
+		megen.generateInput(0.9, 10, 78673, "MixedDriftBernoulliGeneratorOutPut.csv", 10000);
 	}
 	
 	public static void testADWINMultipleDrift() throws IOException
@@ -115,7 +117,7 @@ public class Main {
 	public static void testRelativeVolatilityDetector() throws NumberFormatException, IOException
 	{
 		ADWIN cutpointdetector = new ADWIN();
-		RelativeVolatilityDetector rvd =  new RelativeVolatilityDetector(cutpointdetector, 5000);
+		RelativeVolatilityDetector rvd =  new RelativeVolatilityDetector(cutpointdetector, 32, 0.15);
 		int count = 0;
 		
 		BufferedReader reader = new BufferedReader(new FileReader(new File("MixedDriftBernoulliGeneratorOutPut.csv")));
@@ -133,7 +135,7 @@ public class Main {
 			}
 			else
 			{
-				System.out.println(count);
+				//System.out.println(count);
 			}
 			count++;
 		}
