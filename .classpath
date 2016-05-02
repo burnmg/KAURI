@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="testers/DriftStreams/Hyperplane/|testers/FPRemoved/|testers/pred/|testers/Results/|testers/Results/VolatilityTest/|testers/Results/VolatilityTest/fixedlength/|testers/VolatilityStream/|testers/VolatilityStreamDriftPoint/|testers/VStream_FixedSize/VolatilityStream/|testers/VStream_FixedSize/VolatilityStreams/|testers/DriftStreams/|testers/VStream_FixedSize/|testers/Categorization/|testers/Categorization/ADWIN_Drifts/|testers/Categorization/ADWIN_Drifts/BINOMIAL/|testers/Categorization/ADWIN_Drifts/GAUSSIAN/|testers/Categorization/ADWIN_Drifts/Guaranteed/|testers/Categorization/ADWIN_Results/|testers/Categorization/ADWIN_Results/BINOMIAL/|testers/Categorization/ADWIN_Results/GAUSSIAN/|testers/Categorization/ADWIN_Results/Guaranteed/|testers/Categorization/BernoulliSlope/|testers/Categorization/BernoulliSlope/Guaranteed/|testers/Categorization/BernoulliSlopeComparison/|testers/Categorization/BernoulliSlopeComparison/Guaranteed/|testers/Categorization/SEED_Drifts/|testers/Categorization/SEED_Drifts/GAUSSIAN/|testers/Categorization/SEED_Drifts/Guaranteed/|testers/Categorization/SEED_Results/|testers/Categorization/SEED_Results/GAUSSIAN/|testers/Categorization/SEED_Results/Guaranteed/|testers/Categorization/SlopeData/|testers/Categorization/SlopeData/BINOMIAL/|testers/Categorization/SlopeData/GAUSSIAN/|testers/Categorization/SlopeData/Guaranteed/|testers/Categorization/TrueDriftResults/|testers/Categorization/TrueDriftResults/BINOMIAL/|testers/Categorization/TrueDriftResults/GAUSSIAN/|testers/Categorization/TrueDriftResults/Guaranteed/|testers/Categorization/TrueDriftResults/Poisson/|testers/Categorization/TrueDriftResults/SAMPLE/|testers/VolatilityPredictingDrift/Datasets/|testers/VolatilityPredictingDrift/Results/|testers/VolatilityPredictingDrift/" kind="src" path="src">
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Kauri/apache"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="sizeofag.jar"/>
-	<classpathentry kind="lib" path="/Users/rl/Desktop/moa-release-2015.11/lib/weka.jar"/>
 	<classpathentry kind="lib" path="/Users/rl/Desktop/moa-release-2015.11/lib/moa.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

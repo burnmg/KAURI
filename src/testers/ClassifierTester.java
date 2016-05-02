@@ -1,24 +1,18 @@
 package testers;
 
-import inputstream.HyperplaneGenerator;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-
+import classifiers.HoeffdingTree;
+import cutpointdetection.SingDetector;
+import inputstream.HyperplaneGenerator;
 import volatilityevaluation.VolatilityPredictionFeatureExtractor;
-import weka.classifiers.bayes.NaiveBayesUpdateable;
-import weka.classifiers.trees.HoeffdingTree;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
-
-import cutpointdetection.ADWIN;
-import cutpointdetection.SingDetector;
 
 public class ClassifierTester implements Tester
 {
@@ -111,8 +105,9 @@ public class ClassifierTester implements Tester
 		    if(in > 0)
 		    {
 			long startTime = System.currentTimeMillis();
-			ht.updateClassifier(current);
-
+			// ht.updateClassifier(current);
+			ht.addInstance(current);
+			
 			long endTime = System.currentTimeMillis();
 			totalBuildTime = totalBuildTime + (endTime - startTime);
 
