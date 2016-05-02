@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 import volatilityevaluation.VolatilityPredictionFeatureExtractor;
-import classifiers.HoeffdingTree;
+import classifiers.VFDT;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
@@ -157,7 +157,7 @@ public class ADWINTester implements Tester {
 				Instances struc = loader.getStructure();
 				struc.setClassIndex(struc.numAttributes() - 1);
 
-				HoeffdingTree ht = new HoeffdingTree();
+				VFDT ht = new VFDT();
 				ht.buildClassifier(struc);
 				Instance current;
 

@@ -40,9 +40,9 @@ import edu.gmu.vfml.tree.Node;
  * @see weka.classifiers.trees.Id3
  * @author ulman
  */
-public class HoeffdingTree extends Classifier implements TechnicalInformationHandler, OptionHandler
+public class VFDT extends Classifier implements TechnicalInformationHandler, OptionHandler
 {
-    private static final Logger logger = Logger.getLogger( HoeffdingTree.class.getName( ) );
+    private static final Logger logger = Logger.getLogger( VFDT.class.getName( ) );
 
     private static final long serialVersionUID = 1L;
 

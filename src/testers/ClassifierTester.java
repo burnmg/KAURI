@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import classifiers.HoeffdingTree;
+import classifiers.VFDT;
 import cutpointdetection.SingDetector;
 import inputstream.HyperplaneGenerator;
 import volatilityevaluation.VolatilityPredictionFeatureExtractor;
@@ -92,7 +92,7 @@ public class ClassifierTester implements Tester
 		Instances struc = loader.getStructure();
 		struc.setClassIndex(struc.numAttributes() - 1);
 
-		HoeffdingTree ht = new HoeffdingTree();
+		VFDT ht = new VFDT();
 		ht.buildClassifier(struc);
 		Instance current;
 
@@ -134,7 +134,7 @@ public class ClassifierTester implements Tester
 //			    bw.write(c + "\n");
 //			}
 			in = initInst;
-			ht = new HoeffdingTree();
+			ht = new VFDT();
 			ht.buildClassifier(struc);
 			sing = new SingDetector(0.05,32,1,1,0.01,0.8,75);
 //			adwin = new ADWIN(0.05);

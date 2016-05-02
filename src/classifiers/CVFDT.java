@@ -33,10 +33,10 @@ import edu.gmu.vfml.tree.Node;
  * will be automatically replaced
  * <!-- options-end -->
  * 
- * @see weka.classifiers.trees.HoeffdingTree
+ * @see weka.classifiers.trees.VFDT
  * @author ulman
  */
-public class CVFDT extends HoeffdingTree
+public class CVFDT extends VFDT
 {
     private static final Logger logger = Logger.getLogger( CVFDT.class.getName( ) );
 
@@ -453,7 +453,7 @@ public class CVFDT extends HoeffdingTree
      * Evaluates the attributes of an already split node to determine if
      * a new alternative tree should be created.
      * 
-     * @see HoeffdingTree#checkNodeSplit(Instance, Node)
+     * @see VFDT#checkNodeSplit(Instance, Node)
      */
     protected void recheckNodeSplit( Instance instance, CNode node )
     {
