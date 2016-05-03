@@ -40,8 +40,8 @@ public class Test1
         Attribute attribute1 = data.attribute( "Numeric Attribute 1" );
         instance1.setValue( attribute1, 2.0 );
 
-        Attribute attribute2 = data.attribute( "Nominal Attribute 2" );
-        instance1.setValue( attribute2, "green" );
+        Attribute attribute2 = data.attribute( "Numeric Attribute 2" );
+        //instance1.setValue( attribute2, 2.1);
         
         data.add( instance1 );
 

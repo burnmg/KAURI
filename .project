@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Kauri</name>
+	<name>Volatility-adaptive-tree</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1415230926298</id>
+			<id>0</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -31,7 +31,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1415230926308</id>
+			<id>0</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -40,7 +40,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1415230926308</id>
+			<id>0</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
