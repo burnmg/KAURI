@@ -1,4 +1,4 @@
-package classifiers;
+package classifiers.thirdparty;
 
 import static com.metsci.glimpse.util.logging.LoggerUtils.logWarning;
 

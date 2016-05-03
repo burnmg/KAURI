@@ -6,18 +6,18 @@ import java.util.Enumeration;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
-import classifiers.CVFDT;
-import classifiers.VFDT;
+import classifiers.thirdparty.CVFDT;
+import classifiers.thirdparty.VFDT;
 
 public class CVFDTTest
 {
 	public static void main(String args[]) throws Exception
 	{
-		DataSource source = new DataSource("data/tree.arff");
+		DataSource source = new DataSource("data/data.arff");
 		Instances data = source.getDataSet();
 		data.setClassIndex(data.numAttributes()-1);
 		Enumeration<Instance> enumeration = data.enumerateInstances();
-		VFDT tree = new VFDT();
+		CVFDT tree = new CVFDT();
 		//tree.initialize(data);
 		tree.buildClassifier(data);
 		System.out.println("Tree size: " + tree.getRoot().getTreeSize());

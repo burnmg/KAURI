@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import classifiers.VFDT;
+import classifiers.thirdparty.VFDT;
 import cutpointdetection.SingDetector;
 import inputstream.HyperplaneGenerator;
 import volatilityevaluation.VolatilityPredictionFeatureExtractor;

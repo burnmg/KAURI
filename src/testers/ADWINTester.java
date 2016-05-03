@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 import volatilityevaluation.VolatilityPredictionFeatureExtractor;
-import classifiers.VFDT;
+import classifiers.thirdparty.VFDT;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
